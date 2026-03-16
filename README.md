@@ -1,8 +1,9 @@
 # PalindroneCheckerApp
 
-Goal: Check whether a string is a palindrome by reversing it.
+UC10: Case-Insensitive & Space-Ignored Palindrome
+Goal: Ignore spaces and case while checking a palindrome.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Normalize string
+Apply previous logic
+
+Data Structure: String / Array
