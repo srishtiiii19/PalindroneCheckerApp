@@ -1,8 +1,11 @@
 # PalindroneCheckerApp
 
-Goal: Check whether a string is a palindrome by reversing it.
+UC12: Strategy Pattern for Palindrome Algorithms (Advanced)
+Goal: Choose a palindrome algorithm dynamically.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Define PalindromeStrategy interface
+Implement StackStrategy, DequeStrategy
+Inject strategy at runtime
+
+Data Structure: Varies per strategy
+
