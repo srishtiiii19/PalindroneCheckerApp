@@ -1,8 +1,3 @@
 # PalindroneCheckerApp
 
-Goal: Check whether a string is a palindrome by reversing it.
-Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+The objective of the PalindromeChecker App is to design and implement a console-based Java application that validates whether a given string is a palindrome under different conditions, while strengthening core programming fundamentals and data structure concepts.
