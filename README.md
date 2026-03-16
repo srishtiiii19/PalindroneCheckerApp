@@ -1,8 +1,9 @@
 # PalindroneCheckerApp
 
-Goal: Check whether a string is a palindrome by reversing it.
+UC9: Recursive Palindrome Checker
+Goal: Check palindrome using recursion.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Recursive call compares start & end
+Base condition exits recursion
+Data Structure: Call Stack
+
