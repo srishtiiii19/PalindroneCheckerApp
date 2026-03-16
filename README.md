@@ -1,8 +1,6 @@
-# PalindroneCheckerApp
-
-Goal: Check whether a string is a palindrome by reversing it.
+Goal: Check palindrome using singly linked list.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Convert string to linked list
+Reverse second half
+Compare halves
+Data Structure: Singly Linked List
