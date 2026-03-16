@@ -1,8 +1,6 @@
-# PalindroneCheckerApp
-
-Goal: Check whether a string is a palindrome by reversing it.
+Goal: Demonstrate FIFO vs LIFO using Queue and Stack.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Enqueue characters
+Push characters to stack
+Compare dequeue vs pop
+Data Structures: Queue, Stack
