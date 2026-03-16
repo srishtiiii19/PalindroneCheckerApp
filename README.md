@@ -1,8 +1,9 @@
 # PalindroneCheckerApp
 
-Goal: Check whether a string is a palindrome by reversing it.
+UC11: Object-Oriented Palindrome Service
+Goal: Encapsulate palindrome logic in a class.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Create PalindromeChecker class
+Expose checkPalindrome() method
+
+Data Structure: Internal (Stack / Array)
