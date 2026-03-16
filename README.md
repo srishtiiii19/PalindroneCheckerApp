@@ -1,8 +1,6 @@
-# PalindroneCheckerApp
-
-Goal: Check whether a string is a palindrome by reversing it.
+Goal: Use stack to reverse characters and validate palindrome.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Push characters into stack
+Pop and compare
+Print result
+Data Structure: Stack
