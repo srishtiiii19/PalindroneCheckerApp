@@ -1,16 +1,14 @@
-public class PalindromeCheckerApp {
+class PalindromeChecker {
 
-    static boolean isPalindrome(String input) {
+    // Method to check palindrome
+    public boolean checkPalindrome(String input) {
 
-        // Normalize string: remove spaces and convert to lowercase
-        String normalized = input.replaceAll("\\s+", "").toLowerCase();
-
+        char[] arr = input.toCharArray();
         int start = 0;
-        int end = normalized.length() - 1;
+        int end = arr.length - 1;
 
-        // Compare characters
         while (start < end) {
-            if (normalized.charAt(start) != normalized.charAt(end)) {
+            if (arr[start] != arr[end]) {
                 return false;
             }
             start++;
@@ -19,12 +17,16 @@ public class PalindromeCheckerApp {
 
         return true;
     }
+}
+
+public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String input = "a man a plan a canal panama";
+        String input = "racecar";
 
-        boolean result = isPalindrome(input);
+        PalindromeChecker checker = new PalindromeChecker();
+        boolean result = checker.checkPalindrome(input);
 
         System.out.println("Input: " + input);
         System.out.println("Is Palindrome? : " + result);
