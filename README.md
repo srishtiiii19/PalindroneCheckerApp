@@ -1,8 +1,7 @@
-# PalindroneCheckerApp
-
-Goal: Check whether a string is a palindrome by reversing it.
+Goal: Use Deque to compare front and rear elements.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Insert characters into deque
+Remove first & last
+Compare until empty
+
+Data Structure: Deque
