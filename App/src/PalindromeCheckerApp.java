@@ -1,15 +1,9 @@
 import java.util.*;
 
-// Strategy Interface
-interface PalindromeStrategy {
-    boolean checkPalindrome(String input);
-}
+public class PalindromeCheckerApp {
 
-// Stack-based strategy
-class StackStrategy implements PalindromeStrategy {
-
-    public boolean checkPalindrome(String input) {
-
+    // Stack approach
+    static boolean stackPalindrome(String input) {
         Stack<Character> stack = new Stack<>();
 
         for (char c : input.toCharArray()) {
@@ -24,13 +18,9 @@ class StackStrategy implements PalindromeStrategy {
 
         return true;
     }
-}
 
-// Deque-based strategy
-class DequeStrategy implements PalindromeStrategy {
-
-    public boolean checkPalindrome(String input) {
-
+    // Deque approach
+    static boolean dequePalindrome(String input) {
         Deque<Character> deque = new ArrayDeque<>();
 
         for (char c : input.toCharArray()) {
@@ -45,38 +35,46 @@ class DequeStrategy implements PalindromeStrategy {
 
         return true;
     }
-}
 
-// Context class
-class PalindromeChecker {
+    // Recursion approach
+    static boolean recursionPalindrome(String str, int start, int end) {
+        if (start >= end)
+            return true;
 
-    private PalindromeStrategy strategy;
+        if (str.charAt(start) != str.charAt(end))
+            return false;
 
-    public PalindromeChecker(PalindromeStrategy strategy) {
-        this.strategy = strategy;
+        return recursionPalindrome(str, start + 1, end - 1);
     }
-
-    public boolean checkPalindrome(String input) {
-        return strategy.checkPalindrome(input);
-    }
-}
-
-// Main Application
-public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
         String input = "level";
 
-        // Choose strategy dynamically
-        PalindromeStrategy strategy = new DequeStrategy();
-        // PalindromeStrategy strategy = new StackStrategy();
+        // Stack timing
+        long start = System.nanoTime();
+        boolean stackResult = stackPalindrome(input);
+        long stackTime = System.nanoTime() - start;
 
-        PalindromeChecker checker = new PalindromeChecker(strategy);
+        // Deque timing
+        start = System.nanoTime();
+        boolean dequeResult = dequePalindrome(input);
+        long dequeTime = System.nanoTime() - start;
 
-        boolean result = checker.checkPalindrome(input);
+        // Recursion timing
+        start = System.nanoTime();
+        boolean recursionResult = recursionPalindrome(input, 0, input.length() - 1);
+        long recursionTime = System.nanoTime() - start;
 
-        System.out.println("Input: " + input);
-        System.out.println("Is Palindrome? : " + result);
+        // Final result (all algorithms give same result)
+        boolean finalResult = stackResult;
+
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + finalResult);
+        System.out.println();
+
+        System.out.println("Stack Time : " + stackTime + " ns");
+        System.out.println("Deque Time : " + dequeTime + " ns");
+        System.out.println("Recursion Time : " + recursionTime + " ns");
     }
 }
