@@ -1,8 +1,11 @@
 # PalindroneCheckerApp
 
-Goal: Check whether a string is a palindrome by reversing it.
+UC13: Performance Comparison
+Goal: Compare the performance of different palindrome approaches.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Run multiple algorithms
+Capture execution time
+Display results
+Key Concepts used in UC13:
+System.nanoTime()
+Algorithm comparison
