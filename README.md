@@ -1,8 +1,6 @@
-# PalindroneCheckerApp
-
-Goal: Check whether a string is a palindrome by reversing it.
+Goal: Convert string to character array and compare characters.
 Flow:
-Reverse string using loop
-Compare original and reversed
-Display result
-Data Structure: String
+Convert string to char[]
+Use two-pointer approach
+Compare start & end characters
+Data Structure: char[]
